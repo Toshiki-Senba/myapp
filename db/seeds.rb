@@ -214,8 +214,7 @@ Property.create!(house_name: "ryougoku-share 天空の中庭",
                  property_img: File.open("#{Rails.root}/app/assets/images/ryogoku.png"))
                  
                  
-properties = Property.order(:room_number).take(15)
-
+properties = Property.order(:id).take(15)
 
 5.times do |n|
   vacant_room = "空室"
