@@ -1,7 +1,3 @@
-require "carrierwave/storage/abstract"
-require "carrierwave/storage/file"
-require "carrierwave/storage/fog"
-
 CarrierWave.configure do |config|
   if Rails.env.production? || Rails.env.development?
     config.storage :fog
@@ -13,7 +9,7 @@ CarrierWave.configure do |config|
       provider: "AWS",
       aws_access_key_id: "AKIA2LH3H4GCA4M5TSAU",
       aws_secret_access_key: "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",
-      region: "us-east-2",
+      region: "ap-southeast-1",
     }
   else
     config.storage :file
